@@ -17,13 +17,21 @@
             font-family: 'Open Sans', sans-serif;
         }
 
+        body {
+            color: white;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
         h1 {
             font-size: 40px;
         }
 
         .left-menu {
             padding: 0;
-            background-color: #7D53DE;
+            background-color: #ffffff;
             position: fixed;
             top: 0;
             left: 0;
@@ -36,13 +44,15 @@
             color: rgb(255, 255, 255);
             transition: all 0.5s ease;
         }
+
         a {
-            color: white;
+            color: #035f51;
             transition: 1s all;
         }
+
         a:hover {
-            color: #2a0a77;
-            
+            color: #32e3c8;
+
         }
 
         .img {
@@ -61,19 +71,20 @@
 
         .img-txt:hover {
             opacity: 0.7;
-            
+
         }
 
         .main {
             font-size: 20px;
             margin-left: 225px;
-            background-color: #EEF8FF;
+            background-color: #4abdac;
             height: 900px;
         }
 
         .content {
             padding: 20px;
-            width: 1000px;
+
+            margin: 0;
         }
 
         .content h2,
@@ -86,7 +97,20 @@
         }
 
         .script {
-            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            justify-content: center;
+            padding-top: 10px;
+            margin-top: 50px;
+            background-color: white;
+            border-radius: 30px;
+            width: 1000px;
+            color: #4abdac;
+        }
+
+        .script-content {
+            padding: 20px;
         }
 
         #inputLi {
@@ -107,16 +131,20 @@
         }
 
         #btn {
-            background-color: #7D53DE;
+            background-color: #4abdac;
             border-radius: 12px;
             border: 0;
             box-sizing: border-box;
-            color: #eee;
+            color: white;
             cursor: pointer;
             font-size: 18px;
             height: 50px;
             text-align: center;
             width: 100px;
+            transition: 1s all;
+        }
+        #btn:hover {
+            background-color: #0e9180 ;
         }
 
         .listDone {
@@ -131,7 +159,7 @@
         <div class="left-menu">
             <div class="img-txt">
                 <div class="img">
-            
+
                 </div>
 
             </div>
@@ -144,28 +172,38 @@
 
         <div class="main">
             <div class="content">
-                <h1 style="color: #7D53DE;">ToTasking</h1>
+                <h1 style="color: white;">ToTasking</h1>
             </div>
 
             <div class="content">
                 <h2>Gerador de Tarefas</h2>
                 <p>Liste suas tarefas aqui e tenha total controle sobre seu fluxo de trabalho.
-                    Usamos as mais recentes tecnologias para fazer com que você tenha um fluxo de trabalho incrivel</p>
+                    Usamos as mais recentes tecnologias para fazer com que você tenha um fluxo de trabalho incrivel</</p>
                 <p>Se quiser pode compartilhar seu fluxo de trabalho com sua equipe, para que todos possam listar e
                     fazer o
                     controle das tarefas da empresa</p>
-                <p style="color: #7D53DE;">Lembrando que o Gustavo é viado KKKK</p>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <p style="color: #000000;">Lembrando que o Gustavo é viado KKKK</p>
 
                 <div class="script">
-                    <p><b>Quando concluir a tarefa clique em cima dela para removê-la</b></p>
-                    <input type="text" id="inputLi" value="Digite uma nova tarefa">
-                    <button type="submit" id="btn">Enviar</button>
+                    <div class="script-content">
+                        <p style="color: rgb(33, 0, 36);"><b>Quando concluir a tarefa clique em cima dela para
+                                removê-la</b></p>
+                        <input type="text" id="inputLi" value="Digite uma nova tarefa">
+                        <button type="submit" id="btn">Enviar</button>
 
-                    <ul id="ul">
-                        <li>Estudar JavaScript</li>
-                        <li>Lavar Louças</li>
-                        <li>Ficar rico</li>
-                    </ul>
+                        <ul id="ul">
+                            <li>Estudar JavaScript</li>
+                            <li>Liste suas tarefas</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
