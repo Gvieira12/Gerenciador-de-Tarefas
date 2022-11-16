@@ -36,19 +36,33 @@
             color: rgb(255, 255, 255);
             transition: all 0.5s ease;
         }
+        a {
+            color: white;
+            transition: 1s all;
+        }
+        a:hover {
+            color: #2a0a77;
+            
+        }
 
         .img {
-  
-            width: 100%;
-        }
-
-       .img-content {
-            margin-top: 5px;
-            width: 200px;
-            height: 220px;
+            background-image: url("contents/IMG_6864.jpg");
+            background-size: cover;
             border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin-left: 12.5px;
         }
 
+        .img-txt {
+            opacity: 1;
+            transition: 1.5s all;
+        }
+
+        .img-txt:hover {
+            opacity: 0.7;
+            
+        }
 
         .main {
             font-size: 20px;
@@ -115,14 +129,16 @@
 <body>
     <section>
         <div class="left-menu">
+            <div class="img-txt">
+                <div class="img">
             
-            <div class="img">
-                <img src="contents/IMG_6864.jpg" alt="" class="img-content">
+                </div>
+
             </div>
 
-            <h3>Home</h3>
-            <h3>Progresso</h3>
-            <h3>Sobre nós</h3>
+            <h3><a>Home</a></h3>
+            <h3><a href="calculadora/Index.html">Calculadora JS</a></h3>
+            <h3><a href="curriculo/index.html">Curriculo</a></h3>
 
         </div>
 
@@ -138,7 +154,7 @@
                 <p>Se quiser pode compartilhar seu fluxo de trabalho com sua equipe, para que todos possam listar e
                     fazer o
                     controle das tarefas da empresa</p>
-                    <p style="color: #7D53DE;">Lembrando que o Gustavo é viado KKKK</p>
+                <p style="color: #7D53DE;">Lembrando que o Gustavo é viado KKKK</p>
 
                 <div class="script">
                     <p><b>Quando concluir a tarefa clique em cima dela para removê-la</b></p>
