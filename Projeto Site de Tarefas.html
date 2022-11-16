@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+
+            list-style: none;
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        .left-menu {
+            padding: 0;
+            background-color: #7D53DE;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 225px;
+            height: 100%;
+            padding: 20px 0;
+            font-size: 20px;
+            line-height: 40px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            transition: all 0.5s ease;
+        }
+
+        .img {
+  
+            width: 100%;
+        }
+
+       .img-content {
+            margin-top: 5px;
+            width: 200px;
+            height: 220px;
+            border-radius: 50%;
+        }
+
+
+        .main {
+            font-size: 20px;
+            margin-left: 225px;
+            background-color: #EEF8FF;
+            height: 900px;
+        }
+
+        .content {
+            padding: 20px;
+            width: 1000px;
+        }
+
+        .content h2,
+        p {
+            padding: 3px;
+        }
+
+        .middle {
+            text-align: center;
+        }
+
+        .script {
+            padding-top: 20px;
+        }
+
+        #inputLi {
+            background-color: #303245;
+            border-radius: 12px;
+            border: 0;
+            box-sizing: border-box;
+            color: #eee;
+            font-size: 18px;
+            height: 100%;
+            outline: 0;
+            padding: 10px 20px 10px;
+            width: 30%;
+        }
+
+        .script ul {
+            margin-top: 50px;
+        }
+
+        #btn {
+            background-color: #7D53DE;
+            border-radius: 12px;
+            border: 0;
+            box-sizing: border-box;
+            color: #eee;
+            cursor: pointer;
+            font-size: 18px;
+            height: 50px;
+            margin-top: 38px;
+            text-align: center;
+            width: 100px;
+        }
+
+        .listDone {
+            text-decoration: line-through;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="left-menu">
+            
+            <div class="img">
+                <img src="contents/IMG_6864.jpg" alt="" class="img-content">
+            </div>
+
+            <h3>Home</h3>
+            <h3>Progresso</h3>
+            <h3>Sobre nós</h3>
+
+        </div>
+
+        <div class="main">
+            <div class="content">
+                <h1 style="color: #7D53DE;">ToTasking</h1>
+            </div>
+
+            <div class="content">
+                <h2>Gerador de Tarefas</h2>
+                <p>Liste suas tarefas aqui e tenha total controle sobre seu fluxo de trabalho
+                    Usamos as mais recentes tecnologias para fazer com que você tenha um fluxo de trabalho incrivel</p>
+                <p>Se quiser pode compartilhar seu fluxo de trabalho com sua equipe, para que todos possam listar e
+                    fazer o
+                    controle das tarefas da empresa</p>
+
+                <div class="script">
+                    <input type="text" id="inputLi" value="Digite uma nova tarefa">
+                    <button type="submit" id="btn">Enviar</button>
+
+                    <ul id="ul">
+                        <li>Estudar JavaScript</li>
+                        <li>Lavar Louças</li>
+                        <li>Ficar rico</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var $inputLi = document.getElementById('inputLi');
+        var $btn = document.getElementById('btn');
+        var $ul = document.getElementById('ul');
+        var $lis = document.querySelectorAll('li');
+
+        $inputLi.addEventListener('keyup', function (e) {
+            if (e.keyCode === 13) {
+                addItem();
+            }
+        })
+        $btn.addEventListener('click', addItem);
+
+        $ul.addEventListener('click', function (e) {
+            if (e.target.nodeName === 'LI') {
+                removeTask(e.target);
+            }
+        })
+
+        function removeTask(li) {
+            if (confirm('Deseja realmente excluir a tarefa:' + ' ' + li.textContent + '?')) {
+                li.parentNode.removeChild(li);
+            }
+        }
+
+        //escrever no HTML atualizado
+        function addItem() {
+            var li = document.createElement('li');
+            var text = document.createTextNode($inputLi.value);
+
+            li.appendChild(text);
+            ul.appendChild(li);
+
+            $inputLi.value = '';
+            $inputLi.focus();
+        }
+    </script>
+</body>
+
+</html>
