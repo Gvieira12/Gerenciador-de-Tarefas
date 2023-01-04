@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gvcria o mais brabo</title>
+
+    <style>
+        @font-face {
+            font-family: 'AmsiPro';
+            src: url('font-family/AMSI-cantosarredondados/AMSI/AmsiPro-Bold.ttf') format('truetype');
+        }
+
+        * {
+            list-style: none;
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'AmsiPro', 'Open Sans', sans-serif;
+        }
+
+        body {
+            color: #2e2e2e;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        .btn, .btn2 {
+            background-color: transparent;
+            border: none;
+            transition: 1s all;
+        }
+
+        .btn-img {
+            width: 50px;
+            transition: 1s all;
+
+        }
+        .menu {
+            display: none;
+            transition:  2s all;
+        }
+
+        .left-menu {
+            padding: 0;
+            background-color: #f2ecec;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 225px;
+            height: 100%;
+            padding: 20px 0;
+            font-size: 20px;
+            line-height: 40px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            transition: 2s all;
+        }
+
+        a {
+            color: #035f51;
+            transition: 1s all;
+        }
+
+        a:hover {
+            color: #32e3c8;
+
+        }
+
+        .img {
+            background-image: url("contents/IMG_6864.jpg");
+            background-size: cover;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin-left: 12.5px;
+        }
+
+        .img-txt {
+            opacity: 1;
+            transition: 1.5s all;
+        }
+
+        .img-txt:hover {
+            opacity: 0.7;
+
+        }
+
+        .main {
+            font-size: 20px;
+
+            background-color: #B3DEC1;
+            height: 100%;
+            text-align: justify;
+        }
+
+        .content {
+            padding: 20px;
+
+            margin: 0;
+        }
+
+        .content h2,
+        p {
+            padding: 3px;
+        }
+
+        .middle {
+            text-align: center;
+        }
+
+        .script {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            justify-content: center;
+            padding-top: 10px;
+            margin-top: 50px;
+            background-color: #FEFFFE;
+            border-radius: 30px;
+            width: 1000px;
+            color: #2e2e2e;
+        }
+
+        .script-content {
+            padding: 20px;
+        }
+
+        #inputLi {
+            background-color: #303245;
+            border-radius: 12px;
+            border: 0;
+            box-sizing: border-box;
+            color: #eee;
+            font-size: 18px;
+            height: 100%;
+            outline: 0;
+            padding: 10px 10px 10px;
+            width: 30%;
+        }
+
+        .script ul {
+            margin-top: 50px;
+        }
+
+        #btn {
+            background-color: #B3DEC1;
+            border-radius: 12px;
+            border: 0;
+            box-sizing: border-box;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            height: 50px;
+            text-align: center;
+            width: 100px;
+            transition: 1s all;
+        }
+
+        #btn:hover {
+            background-color: #0e9180;
+        }
+
+        .listDone {
+            text-decoration: line-through;
+            color: green;
+        }
+
+        .text {
+            background-color: #FEFFFE;
+            margin-top: 20px;
+        }
+
+        .text-content {
+            padding-top: 50px;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .text-content h1 {
+            padding-bottom: 0px;
+        }
+
+        .img-carro {
+            display: flex;
+        }
+
+        .img-carro2 {
+            width: 50%;
+        }
+
+        .verde {
+            margin-top: 50px;
+            background-color: #B3DEC1;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+
+        <div>
+            
+            <button class="btn"><img src="contents/kisspng-computer-icons-hamburger-button-menu-new-menu-5b34724c3cb0f7.1188475115301637882486.png" width="100px"></button>
+            <div class="menu">
+                <button class="btn2"><img src="contents/kisspng-computer-icons-hamburger-button-menu-new-menu-5b34724c3cb0f7.1188475115301637882486.png" width="100px"></button>
+                <div class="img-txt">
+                    <div class="img">
+
+                    </div>
+
+                </div>
+
+                <h3><a>Home</a></h3>
+                <h3><a href="calculadora/Index.html">Calculadora JS</a></h3>
+                <h3><a href="curriculo/index.html">Curriculo</a></h3>
+
+            </div>
+        </div>
+
+
+        <div class="main">
+            <div class="content">
+                <h1 style="color: 2e2e2e;">ToTasking</h1>
+            </div>
+
+            <div class="content">
+                <h2>Gerador de Tarefas</h2>
+                <p>Liste suas tarefas aqui e tenha total controle sobre seu fluxo de trabalho.
+                    Usamos as mais recentes tecnologias para fazer com que você tenha um fluxo de trabalho incrivel</<
+                        /p>
+                <p>Se quiser pode compartilhar seu fluxo de trabalho com sua equipe, para que todos possam listar e
+                    fazer o
+                    controle das tarefas da empresa</p>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <p style="color: #000000;">Lembrando que o Gustavo é viado KKKK</p>
+
+                <div class="script">
+                    <div class="script-content">
+                        <p style="color: rgb(33, 0, 36);"><b>Quando concluir a tarefa clique em cima dela para
+                                removê-la</b></p>
+                        <input type="text" id="inputLi" value="Digite uma nova tarefa">
+                        <button type="submit" id="btn">Enviar</button>
+
+                        <ul id="ul">
+                            <li>Estudar JavaScript</li>
+                            <li>Liste suas tarefas</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <section class="text">
+                <div class="text-content">
+                    <h1>O gustavo é copiador</h1>
+                    <p>Fiz meu site namoral, e agora, um indigente quer copiá-lo, eu fico indignado com uma coisa dessa,
+                        esse cabeça de pica</p>
+                </div>
+                <div class="content verde">
+                    <h1 style="text-align: center;">Portfolio Design Grafico</h1>
+                </div>
+                <div class="img-carro">
+                    <img src="contents/img2.jpg" alt="" class="img-carro2">
+                    <img src="contents/post4.jpg" alt="" class="img-carro2">
+                </div>
+                <div class="img-carro">
+                    <img src="contents/Combo-Whisky.jpg" alt="" class="img-carro2">
+                    <img src="contents/guarana-social.jpg" alt="" class="img-carro2">
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>

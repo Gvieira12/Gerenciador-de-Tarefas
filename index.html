@@ -6,9 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gvcria o mais brabo</title>
-    <style>
-        * {
 
+    <style>
+        @font-face {
+            font-family: 'AmsiPro';
+            src: url('font-family/AMSI-cantosarredondados/AMSI/AmsiPro-Bold.ttf') format('truetype');
+        }
+
+        * {
             list-style: none;
             text-decoration: none;
             margin: 0;
@@ -18,7 +23,7 @@
         }
 
         body {
-            color: #2e2e2e;
+            color: #ededed;
         }
 
         p {
@@ -27,26 +32,49 @@
 
         h1 {
             font-size: 40px;
+            color: #f64c72;
+        }
+
+        h2 {
+            font-size: 32px;
+            padding: 20px;
+        }
+
+        .menu {
+            display: none;
         }
 
         .left-menu {
             padding: 0;
-            background-color: #f2ecec;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 225px;
-            height: 100%;
-            padding: 20px 0;
-            font-size: 20px;
-            line-height: 40px;
-            text-align: center;
+            background-color: #fffbfc;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 16px;
             color: rgb(255, 255, 255);
             transition: all 0.5s ease;
+            position: fixed;
+            z-index: 1;
+        }
+
+        .left-menu-contents {
+            margin-left: 100px;
+        }
+
+        .left-menu h3 {
+            padding: 20px;
+            display: inline-block;
+        }
+
+
+        .nav-img {
+            width: 200px;
         }
 
         a {
-            color: #035f51;
+            color: #2e2e2e;
             transition: 1s all;
         }
 
@@ -59,14 +87,19 @@
             background-image: url("contents/IMG_6864.jpg");
             background-size: cover;
             border-radius: 50%;
-            width: 200px;
-            height: 200px;
+            width: 50px;
+            height: 50px;
             margin-left: 12.5px;
+            position: absolute;
+            top: 15px;
+            left: 30px;
         }
 
         .img-txt {
+
             opacity: 1;
             transition: 1.5s all;
+
         }
 
         .img-txt:hover {
@@ -76,15 +109,18 @@
 
         .main {
             font-size: 20px;
-            margin-left: 225px;
-            background-color: #B3DEC1;
+            background-color: #242582;
             height: 100%;
+            text-align: left;
         }
 
         .content {
-            padding: 20px;
-
+            padding: 20px 0 20px 50px;
             margin: 0;
+        }
+
+        .texto {
+            width: 700px;
         }
 
         .content h2,
@@ -103,9 +139,9 @@
             justify-content: center;
             padding-top: 10px;
             margin-top: 50px;
-            background-color: #FEFFFE;
+            background-color: #ededed;
             border-radius: 30px;
-            width: 1000px;
+            width: 100%;
             color: #2e2e2e;
         }
 
@@ -131,7 +167,7 @@
         }
 
         #btn {
-            background-color: #B3DEC1;
+            background-color: #f64c72;
             border-radius: 12px;
             border: 0;
             box-sizing: border-box;
@@ -154,29 +190,136 @@
         }
 
         .text {
-            background-color: #FEFFFE;
-            margin-top: 100px;
+            background-color: #ededed;
+            margin-top: 20px;
         }
+
         .text-content {
-            padding-top: 100px;
+            padding-top: 50px;
             text-align: center;
-            padding-bottom: 50px;
+            padding-bottom: 20px;
+            color: #1d1d1d;
         }
+
         .text-content h1 {
-            padding-bottom: 30px;
+            padding-bottom: 0px;
         }
 
         .img-carro {
             display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 1000px;
+            display: grid;
+            grid-template-columns: 0.5fr 0.5fr 0.5fr;
+            grid-auto-rows: auto;
+            grid-gap: 30px;
+            margin-left: 500px;
+            padding-bottom: 100px;
         }
+
         .img-carro2 {
-            width: 678.5px;
+            width: 340px;
+            height: 340px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .img-carro3 {
+            height: max-content;
+            width: 100%;
+        }
+
+        .img-a:hover {
+
+            margin: 45px;
+            border-radius: 50px;
+            transition: 1s all;
+        }
+
+        .bg {
+            height: 1000px;
+            background-image: url('contents/azul-back.png');
+            background-size: cover;
+            background-position-y: 30%;
+        }
+
+        .verde {
+            margin-top: 50px;
+            padding: 50px;
+        }
+
+        .carrossel-container {
+            margin-top: 50px;
+            height: 300px;
+        }
+
+        .carrossel {
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+        }
+
+        .carrossel-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+        }
+
+        li:hover {
+            background-color: #0e9180;
+        }
+
+        .janela_modal {
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+            position: fixed;
+            left:0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            padding-top: 100px;
+            padding-bottom: 80px;
+        }
+
+        .janela_img {
+            margin: auto;
+            width: 100%;
+            max-width: 800px;
+            display: block;
+        } 
+        
+        .janela_modal_fechar {
+            position: fixed;
+            left: 76em;
+            top: 6.25em;
+        }
+        .janela_modal_fechar button {
+            padding: 12px 40px;
+            border-radius: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            background: #6d6fe9;
+            color: white;
+            border: none;
+            transition: all 1s ease-in-out;
+        }
+        .janela_modal_fechar button:hover {
+            background: white;
+            color: #242582;
+        }
+
+        footer {
+            background-color: black;
         }
     </style>
 </head>
 
 <body>
     <section>
+
         <div class="left-menu">
             <div class="img-txt">
                 <div class="img">
@@ -184,35 +327,35 @@
                 </div>
 
             </div>
-
-            <h3><a>Home</a></h3>
-            <h3><a href="calculadora/Index.html">Calculadora JS</a></h3>
-            <h3><a href="curriculo/index.html">Curriculo</a></h3>
-
+            <div class="left-menu-contents">
+                <h3><a>Home</a></h3>
+                <h3><a href="calculadora/Index.html">Calculadora JS</a></h3>
+                <h3><a href="curriculo/index.html">Curriculo</a></h3>
+            </div>
         </div>
 
         <div class="main">
             <div class="content">
-                <h1 style="color: 2e2e2e;">ToTasking</h1>
+                <h1 style="color: #f64c72;">ToTasking</h1>
             </div>
 
             <div class="content">
-                <h2>Gerador de Tarefas</h2>
-                <p>Liste suas tarefas aqui e tenha total controle sobre seu fluxo de trabalho.
-                    Usamos as mais recentes tecnologias para fazer com que você tenha um fluxo de trabalho incrivel</<
-                        /p>
-                <p>Se quiser pode compartilhar seu fluxo de trabalho com sua equipe, para que todos possam listar e
-                    fazer o
-                    controle das tarefas da empresa</p>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-                <p style="color: #000000;">Lembrando que o Gustavo é viado KKKK</p>
+                <div class="texto">
+                    <h2>Liste suas tarefas aqui e tenha total controle sobre seu fluxo de trabalho.
+                    </h2>
+                    <h2>
+                        Usamos as mais recentes tecnologias para fazer com que você tenha um fluxo de trabalho incrivel
+                    </h2>
+                    <p>Se quiser pode compartilhar seu fluxo de trabalho com sua equipe, para que todos possam listar e
+                        fazer o
+                        controle das tarefas da empresa
+                    </p>
+                    <p style="color: #ffffff;">Lembrando que o Gustavo é viado KKKK</p>
+
+                    <div>
+                        <img src="contents/hero.webp" alt="" class="nav-img">
+                    </div>
+                </div>
 
                 <div class="script">
                     <div class="script-content">
@@ -233,17 +376,104 @@
                 <div class="text-content">
                     <h1>O gustavo é copiador</h1>
                     <p>Fiz meu site namoral, e agora, um indigente quer copiá-lo, eu fico indignado com uma coisa dessa,
-                        esse cabeça de pica</p>    
+                        esse cabeça de pica</p>
                 </div>
-                <div class="content">
+                <div class="bg verde">
+
                     <h1 style="text-align: center;">Portfolio Design Grafico</h1>
+
+                    <h2 style="text-align: center;">About me</h2>
+                    <p>Meu nome é Gabriel Vieira, sou designer gráfico a quase 2 anos, nesse tempo tive muita
+                        expêriencia na profissão, desenvolvi projetos que jamais pensei em um dia fazer, aprendi novas
+                        técnicas, conheci novas pessoas, entre outras coisas muito legais. Meu propósito é auxiliar sua
+                        marca a elevar a qualidade dos seus produtos e torna-lá uma marca desejada pelos consumidores, o
+                        design tem um papel muito importante na escolha das pessoas se vão tomar uma decisão como por
+                        exemplo, comprar um produto, ou se vão ignorá-lo e procurar por um produto mais atrativo.
+                    </p>
+
+                    <p>
+                        Domino as ferramentas do
+                        photoshop na manipulação de imagens, cartazes, imagens para propaganda, 3D, etc.</p>
+                    <p>
+                        Trabalho também com identidade visual, criando marcas que cativam o público e são reconhecidas
+                        em qualquer lugar, priorizo a autenticidade nos meus trabalhos para que meus clientes possam ter
+                        uma experiência única nunca vista antes.
+                    </p>
+
+                    <div class="carrossel-container">
+                        <ul class="carrossel">
+                            <li>
+                                <img src="contents/post4.jpg" alt="" class="carrossel-img">
+                                <p>Flyers</p>
+                            </li>
+                            <li>
+                                <img src="contents/feed.jpg" alt="" class="carrossel-img">
+                                <p>Identidade Visual</p>
+                            </li>
+                            <li>
+                                <img src="contents/img2.jpg" alt="" class="carrossel-img">
+                                <p>3D</p>
+                            </li>
+                        </ul>
+
+                    </div>
                 </div>
                 <div class="img-carro">
-                    <img src="contents/img2.jpg" alt="" class="img-carro2">
-                    <img src="contents/post4.jpg" alt="" class="img-carro2">
+                    <div class="img-carro2">
+                        <a class="img-a"><img src="contents/img2.jpg" alt=""
+                                class="img-carro3" onclick="abrirJ('contents/img2.jpg')"></a>
+                    </div>
+                    <div class="img-carro2">
+                        <a class="img-a"><img src="contents/post4.jpg" alt=""
+                                class="img-carro3" onclick="abrirJ('contents/post4.jpg')"></a>
+                    </div> 
+                    <div class="img-carro2">
+                        <a class="img-a"><img src="contents/Combo-Whisky.jpg" alt="" class="img-carro3"onclick="abrirJ('contents/Combo-Whisky.jpg')"></a>
+                    </div>
+                    <div class="img-carro2">
+                        <a class="img-a"><img src="contents/guarana-social.jpg" alt="" class="img-carro3" onclick="abrirJ('contents/guarana-social.jpg')"></a>
+                    </div>
+                    <div class="img-carro2">
+                        <a class="img-a"><img src="contents/5.png" alt="" class="img-carro3" onclick="abrirJ('contents/5.png')"></a>
+                    </div>
+                    <div class="img-carro2">
+                        <a class="img-a"><img src="contents/6.jpg" alt="" class="img-carro3" onclick="abrirJ('contents/6.jpg')"></a>
+                    </div>
+                    <div class="img-carro2">
+                        <a class="img-a"><img src="contents/7.jpg" alt=""
+                                class="img-carro3" onclick="abrirJ('contents/7.jpg')"></a>
+                    </div>
+                    <div class="img-carro2">
+                        <a class="img-a"><img src="contents/8.jpg" alt=""
+                                class="img-carro3" onclick="abrirJ('contents/8.jpg')"></a>
+                    </div>
+                    <div class="img-carro2">
+                        <a class="img-a"><img src="contents/petshop_final.jpg" alt="" class="img-carro3" onclick="abrirJ('contents/petshop_final.jpg')"></a>
+                    </div>
+                    <div class="img-carro2"> 
+                        <a class="img-a"><img src="contents/copa.jpg" alt="" class="img-carro3" onclick="abrirJ('contents/copa.jpg')">  </a>
+                    </div>
                 </div>
             </section>
         </div>
+        <section class="janela_modal">
+            <div>
+                <img src="" class="janela_img">
+            </div>
+            <div class="janela_modal_fechar">
+                <button>X</button>
+            </div>
+        </section>
+        <footer>
+            <div>
+                <h3>Contato</h3>
+                <h3>About</h3>
+                <h3>Whatsapp</h3>
+            </div>
+            <div>
+                <h3>Direitos reservados a gv pica de mel</h3>
+            </div>
+        </footer>
     </section>
 
     <script>
@@ -283,6 +513,7 @@
             $inputLi.focus();
         }
     </script>
+    <script src="janelaModal.js"></script>
 </body>
 
 </html>
