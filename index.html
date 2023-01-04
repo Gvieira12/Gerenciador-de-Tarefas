@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gvcria o mais brabo</title>
 
+    <script src="https://kit.fontawesome.com/7d807736df.js" crossorigin="anonymous"></script>
+
     <style>
         @font-face {
             font-family: 'AmsiPro';
@@ -68,6 +70,10 @@
             display: inline-block;
         }
 
+        .content-title {
+            margin-top: 100px;
+        }
+
 
         .nav-img {
             width: 200px;
@@ -79,7 +85,7 @@
         }
 
         a:hover {
-            color: #32e3c8;
+            color: #f64c72;
 
         }
 
@@ -230,11 +236,14 @@
             width: 100%;
         }
 
-        .img-a:hover {
+        .img-carro2:hover img {
 
-            margin: 45px;
-            border-radius: 50px;
-            transition: 1s all;
+            /*margin: 45px;
+            border-radius: 50px;*/
+            transition: 1.5s all ease-out;
+            cursor: pointer;
+            -webkit-filter: grayscale(0.8);
+            filter: grayscale(0.9);
         }
 
         .bg {
@@ -266,15 +275,54 @@
             border-radius: 15px;
         }
 
-        li:hover {
-            background-color: #0e9180;
+        .carrossel li:hover {
+            cursor: pointer;
+        }
+
+        .card-perfil {
+            background-color: white;
+            border: 4px solid #f64c72;
+            width: 350px;
+            height: 440px;
+            margin-left: 3em;
+            float: left;
+            border-radius: 15px;
+            color: #1d1d1d;
+        }
+
+        .card-perfil_img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: auto;
+            margin-top: 15px;
+            border: 3px solid #f64c72;
+
+        }
+
+        .card-perfil_img img {
+            width: 200px;
+            margin-right: 20px;
+
+        }
+
+        .card-perfil_info {
+            font-size: 18px;
+            width: 300px;
+            margin: auto;
+            padding-top: 20px;
+        }
+
+        .card-perfil_info li {
+            padding-top: 10px;
         }
 
         .janela_modal {
             background-color: rgba(0, 0, 0, 0.9);
             overflow: auto;
             position: fixed;
-            left:0;
+            left: 0;
             top: 0;
             width: 100%;
             height: 100%;
@@ -288,13 +336,14 @@
             width: 100%;
             max-width: 800px;
             display: block;
-        } 
-        
+        }
+
         .janela_modal_fechar {
             position: fixed;
             left: 76em;
             top: 6.25em;
         }
+
         .janela_modal_fechar button {
             padding: 12px 40px;
             border-radius: 15px;
@@ -306,13 +355,49 @@
             border: none;
             transition: all 1s ease-in-out;
         }
+
         .janela_modal_fechar button:hover {
             background: white;
             color: #242582;
         }
 
         footer {
-            background-color: black;
+            background-color: rgb(52, 52, 52);
+        }
+
+        .wpp_container {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .wpp_btn {
+            padding: 16px;
+            border-radius: 15px;
+            background-color: #25D366;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-weight: bold;
+            border: 2px solid white;
+            text-shadow: black 1px 0px 4px;
+            text-align: center;
+            transition: 0.7s all ease-in-out;
+
+        }
+
+        .wpp_btn:hover {
+            background-color: #128C7E;
+            cursor: pointer;
+        }
+
+        .fa-whatsapp {
+            padding-left: 10px;
+            font-size: 20px;
+        }
+
+        .copy {
+            background-color: rgb(24, 24, 24);
+            padding: 12px;
+            text-align: center;
         }
     </style>
 </head>
@@ -336,7 +421,7 @@
 
         <div class="main">
             <div class="content">
-                <h1 style="color: #f64c72;">ToTasking</h1>
+                <h1 style="color: #f64c72;" class="content-title">ToTasking</h1>
             </div>
 
             <div class="content">
@@ -418,40 +503,74 @@
 
                     </div>
                 </div>
+                <div class="card-perfil">
+                    <div class="card-perfil_img">
+                        <img src="contents/meu-profile-size.jpg" alt="">
+                    </div>
+                    <div class="card-perfil_info">
+                        <ul>
+                            <li>
+                                <p><span style="color: #f64c72;">Nome:</span> Gabriel Vieira da Silva</p>
+                            </li>
+                            <li>
+                                <p><span style="color: #f64c72;">Idade:</span> 20 anos</p>
+                            </li>
+                            <li>
+                                <p><span style="color: #f64c72;">Habilidades:</span> Photoshop | Illustrator | HTML |
+                                    CSS | JAVASCRIPT</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
                 <div class="img-carro">
                     <div class="img-carro2">
-                        <a class="img-a"><img src="contents/img2.jpg" alt=""
-                                class="img-carro3" onclick="abrirJ('contents/img2.jpg')"></a>
+                        <a class="img-a"><img src="contents/1.jpg" alt="" class="img-carro3"
+                                onclick="abrirJ('contents/1.jpg')"></a>
                     </div>
                     <div class="img-carro2">
-                        <a class="img-a"><img src="contents/post4.jpg" alt=""
-                                class="img-carro3" onclick="abrirJ('contents/post4.jpg')"></a>
-                    </div> 
-                    <div class="img-carro2">
-                        <a class="img-a"><img src="contents/Combo-Whisky.jpg" alt="" class="img-carro3"onclick="abrirJ('contents/Combo-Whisky.jpg')"></a>
+                        <a class="img-a"><img src="contents/2.png" alt="" class="img-carro3"
+                                onclick="abrirJ('contents/2.png')"></a>
                     </div>
                     <div class="img-carro2">
-                        <a class="img-a"><img src="contents/guarana-social.jpg" alt="" class="img-carro3" onclick="abrirJ('contents/guarana-social.jpg')"></a>
+                        <a class="img-a"><img src="contents/3.jpg" alt="" class="img-carro3"
+                                onclick="abrirJ('contents/3.jpg')"></a>
                     </div>
                     <div class="img-carro2">
-                        <a class="img-a"><img src="contents/5.png" alt="" class="img-carro3" onclick="abrirJ('contents/5.png')"></a>
+                        <a class="img-a"><img src="contents/guarana-social.jpg" alt="" class="img-carro3"
+                                onclick="abrirJ('contents/guarana-social.jpg')"></a>
                     </div>
                     <div class="img-carro2">
-                        <a class="img-a"><img src="contents/6.jpg" alt="" class="img-carro3" onclick="abrirJ('contents/6.jpg')"></a>
+                        <a class="img-a"><img src="contents/5.png" alt="" class="img-carro3"
+                                onclick="abrirJ('contents/5.png')"></a>
                     </div>
                     <div class="img-carro2">
-                        <a class="img-a"><img src="contents/7.jpg" alt=""
-                                class="img-carro3" onclick="abrirJ('contents/7.jpg')"></a>
+                        <a class="img-a"><img src="contents/6.jpg" alt="" class="img-carro3"
+                                onclick="abrirJ('contents/6.jpg')"></a>
                     </div>
                     <div class="img-carro2">
-                        <a class="img-a"><img src="contents/8.jpg" alt=""
-                                class="img-carro3" onclick="abrirJ('contents/8.jpg')"></a>
+                        <a class="img-a"><img src="contents/7.jpg" alt="" class="img-carro3"
+                                onclick="abrirJ('contents/7.jpg')"></a>
                     </div>
                     <div class="img-carro2">
-                        <a class="img-a"><img src="contents/petshop_final.jpg" alt="" class="img-carro3" onclick="abrirJ('contents/petshop_final.jpg')"></a>
+                        <a class="img-a"><img src="contents/8.jpg" alt="" class="img-carro3"
+                                onclick="abrirJ('contents/8.jpg')"></a>
                     </div>
-                    <div class="img-carro2"> 
-                        <a class="img-a"><img src="contents/copa.jpg" alt="" class="img-carro3" onclick="abrirJ('contents/copa.jpg')">  </a>
+                    <div class="img-carro2">
+                        <a class="img-a"><img src="contents/petshop_final.jpg" alt="" class="img-carro3"
+                                onclick="abrirJ('contents/petshop_final.jpg')"></a>
+                    </div>
+                    <div class="img-carro2">
+                        <a class="img-a"><img src="contents/img2.jpg" alt="" class="img-carro3"
+                                onclick="abrirJ('contents/img2.jpg')"> </a>
+                    </div>
+                    <div class="img-carro2">
+                        <a class="img-a"><img src="contents/post4.jpg" alt="" class="img-carro3"
+                                onclick="abrirJ('contents/post4.jpg')"> </a>
+                    </div>
+                    <div class="img-carro2">
+                        <a class="img-a"><img src="contents/copa.jpg" alt="" class="img-carro3"
+                                onclick="abrirJ('contents/copa.jpg')"> </a>
                     </div>
                 </div>
             </section>
@@ -465,13 +584,12 @@
             </div>
         </section>
         <footer>
-            <div>
-                <h3>Contato</h3>
-                <h3>About</h3>
-                <h3>Whatsapp</h3>
+            <div class="wpp_container">
+                <a href="https://web.whatsapp.com/" target="_blank"><span><button class="wpp_btn">Fale comigo | Talk to me <i
+                            class="fa-brands fa-whatsapp"></i></button></span></a>
             </div>
-            <div>
-                <h3>Direitos reservados a gv pica de mel</h3>
+            <div class="copy">
+                <p>© 2023 Gabriel Vieira, all rights reserved</p>
             </div>
         </footer>
     </section>

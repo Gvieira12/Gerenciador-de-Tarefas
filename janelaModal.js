@@ -10,6 +10,7 @@ function abrirJ(img) {
     jmodalImg.src = img
     jmodalBtn.onclick=function() {
         jmodal.style.display = 'none';
+        $nav.style.display = 'block';
     } 
 
 
