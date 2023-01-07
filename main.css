@@ -424,23 +424,56 @@ footer {
     }
 
     .left-menu {
-        display: none;
+        position: static;
+        height: 20px;
+        font-size: 10px;
+        margin-left: 0;
+        padding: 0;
+        justify-content: center;
+        max-width: 100%;
+    }
+    
+    .content-title {
+        margin-top: 30px;
+    }
+
+    .img {
+        position: absolute;
+        top: 10px;
+        left: 36px;
+        width: 30px;
+        height: 30px;
+        margin-left: 0;
+    }
+
+
+    .left-menu h3 {
+        padding: 5px;
+    }
+    .left-menu-contents {
+        margin-left: 80px ;
+        margin-top: 7%;
+        padding: 0;
+        font-size: 14px;
+    }
+    
+    .nav-img {
+        width: 50px;
     }
 
     .texto {
         width: 300px;
+       
     }
 
     .text {
         width: 100%;
+       
     }
 
     .main {
         font-size: 12px;
-    }
-
-    .nav-img {
-        width: 100px;
+        margin-top: 40px;
     }
 
     .script {
@@ -531,7 +564,9 @@ footer {
     }
 
     .content {
-        padding: 0;
+        padding: 0 0 0 3em;
+        padding-top: 7px;
+        
     }
     .img-carro {
         display: flex;
@@ -544,7 +579,7 @@ footer {
     .img-carro2,
     .addJs {
         margin: auto;
-        width: 250px;
+        width: 70%;
         height: 250px;
         overflow: hidden;
         border-radius: 10px;
