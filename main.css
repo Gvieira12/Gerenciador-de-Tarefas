@@ -1,0 +1,591 @@
+@font-face {
+    font-family: 'AmsiPro';
+    src: url('font-family/AMSI-cantosarredondados/AMSI/AmsiPro-Bold.ttf') format('truetype');
+}
+
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    color: #ededed;
+}
+
+p {
+    margin-top: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    color: #f64c72;
+}
+
+h2 {
+    font-size: 32px;
+    padding: 20px;
+}
+
+.menu {
+    display: none;
+}
+
+.left-menu {
+    padding: 0;
+    background-color: #fffbfc;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    transition: all 0.5s ease;
+    position: fixed;
+    z-index: 1;
+}
+
+.left-menu-contents {
+    margin-left: 100px;
+}
+
+.left-menu h3 {
+    padding: 20px;
+    display: inline-block;
+}
+
+.content-title {
+    margin-top: 100px;
+}
+
+
+.nav-img {
+    width: 200px;
+}
+
+a {
+    color: #2e2e2e;
+    transition: 1s all;
+}
+
+a:hover {
+    color: #f64c72;
+
+}
+
+.img {
+    background-image: url("contents/IMG_6864.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 12.5px;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+}
+
+.img-txt {
+
+    opacity: 1;
+    transition: 1.5s all;
+
+}
+
+.img-txt:hover {
+    opacity: 0.7;
+
+}
+
+.main {
+    font-size: 20px;
+    background-color: #242582;
+    height: 100%;
+    text-align: left;
+}
+
+.content {
+    padding: 20px 0 20px 50px;
+    margin: 0;
+}
+
+.texto {
+    width: 700px;
+}
+
+.content h2,
+p {
+    padding: 3px;
+}
+
+.middle {
+    text-align: center;
+}
+
+.script {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 10px;
+    margin-top: 50px;
+    background-color: #ededed;
+    border-radius: 30px;
+    width: 100%;
+    color: #2e2e2e;
+}
+
+.script-content {
+    padding: 20px;
+}
+
+#inputLi {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 10px 10px 10px;
+    width: 30%;
+}
+
+.script ul {
+    margin-top: 50px;
+}
+
+#btn {
+    background-color: #f64c72;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    text-align: center;
+    width: 100px;
+    transition: 1s all;
+}
+
+#btn:hover {
+    background-color: #0e9180;
+}
+
+.listDone {
+    text-decoration: line-through;
+    color: green;
+}
+
+.text {
+    background-color: #ededed;
+    margin-top: 20px;
+}
+
+.text-content {
+    padding-top: 50px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: #1d1d1d;
+}
+
+.text-content h1 {
+    padding-bottom: 0px;
+}
+
+.img-carro {
+    justify-content: center;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 0.3fr));
+    grid-auto-rows: auto;
+    grid-gap: 4vh;
+    margin-left: 300px;
+    padding-bottom: 100px;
+}
+
+.img-carro2,
+.addJs {
+    width: 310px;
+    height: 310px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.img-carro3 {
+    height: max-content;
+    width: 100%;
+}
+
+.img-carro2:hover img {
+
+    /*margin: 45px;
+    border-radius: 50px;*/
+    transition: 1.5s all ease-out;
+    cursor: pointer;
+    -webkit-filter: grayscale(0.8);
+    filter: grayscale(0.9);
+}
+
+.bg {
+    height: 1000px;
+    background-image: url('contents/azul-back.png');
+    background-size: cover;
+    background-position-y: 30%;
+}
+
+.verde {
+    margin-top: 50px;
+    padding: 50px;
+}
+
+.carrossel-container {
+    margin-top: 50px;
+    height: 300px;
+}
+
+.carrossel {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.carrossel-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.carrossel li:hover {
+    cursor: pointer;
+}
+
+.card-perfil {
+    background-color: white;
+    border: 4px solid #f64c72;
+    width: 350px;
+    height: 440px;
+    margin-left: 3em;
+    float: left;
+    border-radius: 15px;
+    color: #1d1d1d;
+}
+
+.card-perfil_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 15px;
+    border: 3px solid #f64c72;
+
+}
+
+.card-perfil_img img {
+    width: 200px;
+    margin-right: 20px;
+
+}
+
+.card-perfil_info {
+    font-size: 18px;
+    width: 300px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.card-perfil_info li {
+    padding-top: 10px;
+}
+
+.janela_modal {
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.janela_img {
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    display: block;
+}
+
+.janela_modal_fechar {
+    position: fixed;
+    left: 76em;
+    top: 6.25em;
+}
+
+.janela_modal_fechar button {
+    padding: 12px 40px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #6d6fe9;
+    color: white;
+    border: none;
+    transition: all 1s ease-in-out;
+}
+
+.janela_modal_fechar button:hover {
+    background: white;
+    color: #242582;
+}
+
+footer {
+    background-color: rgb(52, 52, 52);
+}
+
+.wpp_container {
+    padding: 30px;
+    text-align: center;
+}
+
+.wpp_btn {
+    padding: 16px;
+    border-radius: 15px;
+    background-color: #25D366;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid white;
+    text-shadow: black 1px 0px 4px;
+    text-align: center;
+    transition: 0.7s all ease-in-out;
+
+}
+
+.wpp_btn:hover {
+    background-color: #128C7E;
+    cursor: pointer;
+}
+
+.fa-whatsapp {
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.copy {
+    background-color: rgb(24, 24, 24);
+    padding: 12px;
+    text-align: center;
+}
+
+@media (max-width: 1380px) {
+
+    .img-carro2,
+    .addJs {
+        width: 280px;
+        height: 280px;
+    }
+
+    .card-perfil {
+        width: 250px;
+        margin-left: 3em;
+    }
+
+    .card-perfil_info {
+        width: 180px;
+        font-size: 16px;
+    }
+
+    .img-carro {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 0.3fr));
+
+
+    }
+}
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    .left-menu {
+        display: none;
+    }
+
+    .texto {
+        width: 300px;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .main {
+        font-size: 12px;
+    }
+
+    .nav-img {
+        width: 100px;
+    }
+
+    .script {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: center;
+        padding-top: 10px;
+        margin-top: 50px;
+        background-color: #ededed;
+        border-radius: 30px;
+        width: 100%;
+        color: #2e2e2e;
+    }
+
+    .script-content {
+        padding: 20px;
+    }
+
+    #inputLi {
+        background-color: #303245;
+        border-radius: 12px;
+        border: 0;
+        box-sizing: border-box;
+        color: #eee;
+        font-size: 8px;
+        height: 100%;
+        outline: 0;
+        padding: 10px 10px 10px;
+        width: 100px;
+    }
+
+    .script ul {
+        margin-top: 50px;
+    }
+
+    #btn {
+        background-color: #f64c72;
+        border-radius: 12px;
+        border: 0;
+        box-sizing: border-box;
+        color: white;
+        cursor: pointer;
+        font-size: 8px;
+        height: 20px;
+        text-align: center;
+        width: 40px;
+        transition: 1s all;
+    }
+
+    #btn:hover {
+        background-color: #0e9180;
+    }
+
+    .bg {
+        background-image: none;
+        background-color: #242582;
+        max-width: 100%;
+        font-size: 10px;
+        height: 100%;
+    }
+
+    .carrossel-container {
+        width: 200px;
+        margin: auto;
+        padding-top: 40px;
+
+    }
+
+    .carrossel {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+    }
+
+    .carrossel-img {
+        width: 150px;
+        height: 150px;
+        padding: 10px;
+
+    }
+
+    .card-perfil {
+        float: none;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    .img-carro {
+        display: flex;
+        flex-direction: column;
+        margin-left: 18%;
+        margin-top: 50px;
+        padding-bottom: 40px;
+    }
+
+    .img-carro2,
+    .addJs {
+        width: 310px;
+        height: 310px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .janela_modal {
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow: auto;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+    
+    .janela_img {
+        margin: auto;
+        width: 100%;
+        max-width: 400px;
+        display: block;
+    }
+    
+    .janela_modal_fechar {
+        position: fixed;
+        left: 3em;
+        top: 2.25em;
+    }
+    
+    .janela_modal_fechar button {
+        padding: 12px 40px;
+        border-radius: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        background: #6d6fe9;
+        color: white;
+        border: none;
+        transition: all 1s ease-in-out;
+    }
+    
+    .janela_modal_fechar button:hover {
+        background: white;
+        color: #242582;
+    }
+}
