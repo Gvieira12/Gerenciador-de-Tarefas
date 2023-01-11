@@ -129,18 +129,19 @@ p {
 .script {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    
     justify-content: center;
     padding-top: 10px;
     margin-top: 50px;
+    margin-right: 10px;
     background-color: #ededed;
     border-radius: 30px;
-    width: 100%;
+    width: 90%;
     color: #2e2e2e;
 }
 
 .script-content {
-    padding: 20px;
+    padding: 10px;
 }
 
 #inputLi {
@@ -270,7 +271,7 @@ p {
     background-color: white;
     border: 4px solid #f64c72;
     width: 350px;
-    height: 440px;
+    height: 415px;
     margin-left: 3em;
     float: left;
     border-radius: 15px;
@@ -332,7 +333,7 @@ p {
 }
 
 .janela_modal_fechar button {
-    padding: 12px 40px;
+    padding: 8px 40px;
     border-radius: 15px;
     font-size: 20px;
     font-weight: bold;
@@ -416,11 +417,11 @@ footer {
 @media (max-width: 500px) {
 
     h1 {
-        font-size: 16px;
+        font-size: 24px;
     }
 
     h2 {
-        font-size: 14px;
+        font-size: 22px;
     }
 
     .left-menu {
@@ -466,9 +467,12 @@ footer {
        
     }
 
-    .text {
-        width: 100%;
-       
+
+    .text-content {
+        font-size: 18px;
+        padding-left: 2.5em;
+        text-align: center;
+        width: 90%;
     }
 
     .main {
@@ -485,7 +489,6 @@ footer {
         margin-top: 50px;
         background-color: #ededed;
         border-radius: 30px;
-        width: 100%;
         color: #2e2e2e;
     }
 
@@ -534,6 +537,7 @@ footer {
         max-width: 100%;
         font-size: 10px;
         height: 100%;
+        font-size: 18px;
     }
 
     .carrossel-container {
@@ -579,7 +583,7 @@ footer {
     .img-carro2,
     .addJs {
         margin: auto;
-        width: 70%;
+        width: 90%;
         height: 250px;
         overflow: hidden;
         border-radius: 10px;
