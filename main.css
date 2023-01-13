@@ -583,8 +583,8 @@ footer {
     .img-carro2,
     .addJs {
         margin: auto;
-        width: 90%;
-        height: 350px;
+        width: 320px;
+        height: 320px;
         overflow: hidden;
         border-radius: 10px;
     }
