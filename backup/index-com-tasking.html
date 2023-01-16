@@ -23,21 +23,61 @@
             </div>
             <div class="left-menu-contents">
                 <h3><a>Início</a></h3>
-                <h3><a href="">Calculadora JS</a></h3>
-                <h3><a href="">Curriculo</a></h3>
+                <h3><a href="calculadora/Index.html">Calculadora JS</a></h3>
+                <h3><a href="curriculo/index.html">Curriculo</a></h3>
             </div>
         </div>
 
         <div class="main">
+            <div class="content">
+                <h1 style="color: #f64c72;" class="content-title">ToTasking</h1>
+            </div>
+
+            <div class="content">
+                <div class="texto">
+                    <h2>Liste suas tarefas aqui e tenha total controle sobre seu fluxo de trabalho.
+                    </h2>
+                    <h2>
+                        Usamos as mais recentes tecnologias para fazer com que você tenha um fluxo de trabalho incrivel
+                    </h2>
+                    <p>Se quiser pode compartilhar seu fluxo de trabalho com sua equipe, para que todos possam listar e
+                        fazer o
+                        controle das tarefas da empresa
+                    </p>
+                    <p style="color: #ffffff;">Lembrando que o Gustavo é viado KKKK</p>
+
+                    <div>
+                        <img src="contents/hero.webp" alt="" class="nav-img">
+                    </div>
+                </div>
+
+                <div class="script">
+                    <div class="script-content">
+                        <p style="color: rgb(33, 0, 36);"><b>Quando concluir a tarefa clique em cima dela para
+                                removê-la</b></p>
+                        <input type="text" id="inputLi" value="Digite uma nova tarefa">
+                        <button type="submit" id="btn">Enviar</button>
+
+                        <ul id="ul">
+                            <li>Estudar JavaScript</li>
+                            <li>Liste suas tarefas</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
             <section class="text">
+                <div class="text-content">
+                    <h1>O gustavo é copiador</h1>
+                    <p>Fiz meu site namoral, e agora, um indigente quer copiá-lo, eu fico indignado com uma coisa dessa,
+                        esse cabeça de pica</p>
+                </div>
                 <div class="bg verde">
 
                     <h1 style="text-align: center;">Portfolio Design Grafico</h1>
 
                     <h2 style="text-align: center;">About me</h2>
-                    <!--
-                        texto original
-                        <p>Meu nome é Gabriel Vieira, sou designer gráfico a quase 2 anos, nesse tempo tive muita
+                    <p>Meu nome é Gabriel Vieira, sou designer gráfico a quase 2 anos, nesse tempo tive muita
                         expêriencia na profissão, desenvolvi projetos que jamais pensei em um dia fazer, aprendi novas
                         técnicas, conheci novas pessoas, entre outras coisas muito legais. Meu propósito é auxiliar sua
                         marca a elevar a qualidade dos seus produtos e torna-lá uma marca desejada pelos consumidores, o
@@ -52,27 +92,6 @@
                         Trabalho também com identidade visual, criando marcas que cativam o público e são reconhecidas
                         em qualquer lugar, priorizo a autenticidade nos meus trabalhos para que meus clientes possam ter
                         uma experiência única nunca vista antes.
-                    </p>
-                    -->
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.
-
-                        Why do we use it?
-                        It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                        distribution of letters, as opposed to using 'Content here, content here', making it look like
-                        readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
-                        their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
-                        their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on
-                        purpose (injected humour and the like).
-
-
                     </p>
 
                     <div class="carrossel-container">
@@ -106,7 +125,7 @@
                                 <p><span style="color: #f64c72;">Idade:</span> 20 anos</p>
                             </li>
                             <li>
-                                <p><span style="color: #f64c72;">Habilidades:</span> Photoshop | Illustrator | HTML |
+                                <p><span style="color: #f64c72;">Habilidade:</span> Photoshop | Illustrator | HTML |
                                     CSS | JAVASCRIPT</p>
                             </li>
                         </ul>
@@ -149,7 +168,7 @@
                 <button>X</button>
             </div>
         </section>
-
+        
         <footer>
             <div class="wpp_container">
                 <a href="https://wa.me/5527999644341?text=Ol%C3%A1%2C+vamos+iniciar+seu+or%C3%A7amento%3F"
@@ -162,12 +181,48 @@
         </footer>
     </section>
 
+    <script>
+        var $inputLi = document.getElementById('inputLi');
+        var $btn = document.getElementById('btn');
+        var $ul = document.getElementById('ul');
+        var $lis = document.querySelectorAll('li');
 
+        $inputLi.addEventListener('keyup', function (e) {
+            if (e.keyCode === 13) {
+                addItem();
+            }
+        })
+        $btn.addEventListener('click', addItem);
+
+        $ul.addEventListener('click', function (e) {
+            if (e.target.nodeName === 'LI') {
+                removeTask(e.target);
+            }
+        })
+
+        function removeTask(li) {
+            if (confirm('Deseja realmente excluir a tarefa:' + ' ' + li.textContent + '?')) {
+                li.parentNode.removeChild(li);
+            }
+        }
+
+        //escrever no HTML atualizado
+        function addItem() {
+            var li = document.createElement('li');
+            var text = document.createTextNode($inputLi.value);
+
+            li.appendChild(text);
+            ul.appendChild(li);
+
+            $inputLi.value = '';
+            $inputLi.focus();
+        }
+    </script>
     <script src="janelaModal.js"></script>
     <script type="module" src="modules/function.js"></script>
-    <script type="module" src="add.js"></script>
+    <script  type="module" src="add.js"></script>
     <script src="modules/cardFixed.js"></script>
-
+    
 </body>
 
 </html>

@@ -129,7 +129,7 @@ p {
 .script {
     display: flex;
     flex-direction: column;
-    
+
     justify-content: center;
     padding-top: 10px;
     margin-top: 50px;
@@ -186,7 +186,7 @@ p {
 
 .text {
     background-color: #ededed;
-    margin-top: 20px;
+
 }
 
 .text-content {
@@ -241,11 +241,12 @@ p {
     background-image: url('contents/azul-back.png');
     background-size: cover;
     background-position-y: 30%;
+
 }
 
 .verde {
-    margin-top: 50px;
     padding: 50px;
+    padding-top: 100px;
 }
 
 .carrossel-container {
@@ -396,11 +397,11 @@ footer {
         font-size: 30px;
         color: #f64c72;
     }
-    
+
     h2 {
         font-size: 26px;
         padding: 20px;
-    }    
+    }
 
     .content {
         padding: 20px 20px 20px 20px;
@@ -411,7 +412,7 @@ footer {
         width: 100%;
     }
 
-    .script { 
+    .script {
         margin: auto;
         padding-top: 10px;
         margin-top: 50px;
@@ -420,7 +421,7 @@ footer {
     .verde {
         padding-left: 20px;
     }
-    
+
 
     .img-carro2,
     .addJs {
@@ -431,34 +432,34 @@ footer {
     .card-perfil {
         width: 250px;
         margin-left: 3em;
-        height: 250px;
+        height: 320px;
     }
 
     .card-perfil_img {
-        width: 100px;
-        height: 100px;
+        width: 140px;
+        height: 140px;
         border-radius: 50%;
         overflow: hidden;
         margin: auto;
         margin-top: 15px;
         border: 3px solid #f64c72;
-    
+
     }
-    
+
     .card-perfil_img img {
-        width: 130px;
+        width: 180px;
         margin-right: 60px;
-    
+
     }
 
     .card-perfil_info {
         width: 220px;
-        font-size: 14px;
+        font-size: 15px;
         padding-top: 0;
     }
-    
+
     .card-perfil_info li {
-        padding-top: 0px;
+        padding-top: 5px;
     }
 
     .img-carro {
@@ -470,7 +471,7 @@ footer {
 }
 
 
-@media (max-width: 913px) {
+@media (max-width: 919px) {
 
     h1 {
         font-size: 24px;
@@ -481,23 +482,23 @@ footer {
     }
 
     .left-menu {
-        position: static;
-        height: 20px;
+        position: fixed;
+        height: 60px;
         font-size: 10px;
         margin-left: 0;
         padding: 0;
         justify-content: center;
-        max-width: 100%;
+        
     }
-    
+
     .content-title {
         margin-top: 30px;
     }
 
     .img {
         position: absolute;
-        top: 10px;
-        left: 36px;
+        top: 16px;
+        left: 14px;
         width: 30px;
         height: 30px;
         margin-left: 0;
@@ -507,20 +508,21 @@ footer {
     .left-menu h3 {
         padding: 5px;
     }
+
     .left-menu-contents {
-        margin-left: 80px ;
-        margin-top: 7%;
+        margin-left: 60px;
+        margin-top: 1%;
         padding: 0;
         font-size: 14px;
     }
-    
+
     .nav-img {
         width: 50px;
     }
 
     .texto {
         width: 100%;
-       
+
     }
 
 
@@ -534,7 +536,8 @@ footer {
 
     .main {
         font-size: 12px;
-        margin-top: 40px;
+        margin-top: 0;
+        padding-top: 80px;
     }
 
     .script {
@@ -638,22 +641,22 @@ footer {
         margin: auto;
         margin-top: 15px;
         border: 3px solid #f64c72;
-    
+
     }
-    
+
     .card-perfil_img img {
         width: 160px;
         margin-right: 60px;
-    
+
     }
-    
+
     .card-perfil_info {
         font-size: 14px;
         width: 200px;
         margin: auto;
         padding-top: 0px;
     }
-    
+
     .card-perfil_info li {
         padding-top: 4px;
     }
@@ -661,12 +664,13 @@ footer {
     .content {
         padding: 10px 0 0 10px;
         margin: 0;
-        
+
     }
+
     .img-carro {
         max-width: 100%;
         margin: auto;
-        margin-top:50px ;
+        margin-top: 50px;
         grid-template-columns: repeat(auto-fill, minmax(320px, 0.4fr));
     }
 
@@ -691,20 +695,20 @@ footer {
         padding-top: 100px;
         padding-bottom: 80px;
     }
-    
+
     .janela_img {
         margin: auto;
         width: 100%;
         max-width: 700px;
         display: block;
     }
-    
+
     .janela_modal_fechar {
         position: absolute;
         left: 5em;
         top: 3em;
     }
-    
+
     .janela_modal_fechar button {
         padding: 7px 30px;
         border-radius: 15px;
@@ -715,9 +719,9 @@ footer {
         color: white;
         border: none;
         transition: all 1s ease-in-out;
-        
+
     }
-    
+
     .janela_modal_fechar button:hover {
         background: white;
         color: #242582;
@@ -725,7 +729,7 @@ footer {
 }
 
 @media (max-width: 725px) {
-    
+
     h1 {
         font-size: 24px;
     }
@@ -735,23 +739,23 @@ footer {
     }
 
     .left-menu {
-        position: static;
-        height: 20px;
+        position: fixed;
+        height: 60px;
         font-size: 10px;
         margin-left: 0;
         padding: 0;
         justify-content: center;
-        max-width: 100%;
+       
     }
-    
+
     .content-title {
         margin-top: 30px;
     }
 
     .img {
         position: absolute;
-        top: 10px;
-        left: 36px;
+        top: 16px;
+        left: 10px;
         width: 30px;
         height: 30px;
         margin-left: 0;
@@ -761,20 +765,22 @@ footer {
     .left-menu h3 {
         padding: 5px;
     }
+
     .left-menu-contents {
-        margin-left: 80px ;
-        margin-top: 7%;
+        margin-left: 50px;
+        margin-top: 1%;
         padding: 0;
         font-size: 14px;
+
     }
-    
+
     .nav-img {
         width: 50px;
     }
 
     .texto {
         width: 100%;
-       
+
     }
 
 
@@ -788,7 +794,8 @@ footer {
 
     .main {
         font-size: 12px;
-        margin-top: 40px;
+        margin-top: 0;
+        padding-top: 80px;
     }
 
     .script {
@@ -892,22 +899,22 @@ footer {
         margin: auto;
         margin-top: 15px;
         border: 3px solid #f64c72;
-    
+
     }
-    
+
     .card-perfil_img img {
         width: 160px;
         margin-right: 60px;
-    
+
     }
-    
+
     .card-perfil_info {
         font-size: 14px;
         width: 200px;
         margin: auto;
         padding-top: 0px;
     }
-    
+
     .card-perfil_info li {
         padding-top: 4px;
     }
@@ -915,14 +922,15 @@ footer {
     .content {
         padding: 10px 0 0 10px;
         margin: 0;
-        
+
     }
+
     .img-carro {
         display: flex;
         flex-direction: column;
         max-width: 100%;
         margin: auto;
-        margin-top:50px ;
+        margin-top: 50px;
     }
 
     .img-carro2,
@@ -946,20 +954,20 @@ footer {
         padding-top: 100px;
         padding-bottom: 80px;
     }
-    
+
     .janela_img {
         margin: auto;
         width: 100%;
         max-width: 90%;
         display: block;
     }
-    
+
     .janela_modal_fechar {
         position: absolute;
         left: 0.6em;
         top: 3em;
     }
-    
+
     .janela_modal_fechar button {
         padding: 7px 30px;
         border-radius: 15px;
@@ -970,11 +978,11 @@ footer {
         color: white;
         border: none;
         transition: all 1s ease-in-out;
-        
+
     }
-    
+
     .janela_modal_fechar button:hover {
         background: white;
         color: #242582;
     }
-} 
+}
