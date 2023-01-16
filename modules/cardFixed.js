@@ -7,7 +7,7 @@ window.addEventListener('scroll', function () {
     var largura = window.screen.width;
     console.log(altura)
     console.log(largura)
-    if (altura > 600 && largura > 600) {
+    if (altura > 300 && largura > 600) {
         if (pageYOffset > 2178) {
             card.style.position = 'sticky';
             card.style.top = '100px';
